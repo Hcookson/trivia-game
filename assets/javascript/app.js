@@ -167,10 +167,35 @@ var questions = [
 },
     
 ];
+let countDown;
+const timeDisplay = document.getElementById("time-left");
+ 
+function timer(seconds) {
+    const now = Date.now();
+    const then = now + seconds * 1000;
+    displayTimeLeft(seconds);
+   
+   
+    countDown = setInterval(() => {
+        const secondsLeft = Math.round((then - Date.now()) / 1000);
 
+        if(secondsLeft <= 0) {
+            clearInterval(countDown);
+            return;
+        }
+        displayTimeLeft(secondsLeft);
+    }, 1000);
+}
 
+function displayTimeLeft(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainderSeconds = seconds % 60;
+    const display = "${minutes}:${remainderSeconds}";
+    timeDisplay.textContent = display;
+}
 
 function loadQuiz (questions, quizContainer, resultsContainer, submitButton) {
+  
   // place to put ouput and users answers
        function showQuestions (questions, quizContainer) {
             var output =[];
@@ -235,6 +260,7 @@ submitButton.onclick = function() {
     showResults(questions,quizContainer, resultsContainer);
     }
 }
+
 var quizContainer = document.getElementById("quiz");
 var resultsContainer = document.getElementById("results");
 var submitButton = document.getElementById("submit");
