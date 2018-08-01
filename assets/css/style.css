@@ -1,0 +1,50 @@
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+html {
+    background: url(../images/retina_wood.png);
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 90px;
+    color: whitesmoke;
+    margin: 0 auto;
+    text-align: center;
+}
+body {
+    font-family: 'Open Sans', sans-serif; 
+    
+}
+
+.container {
+    margin: 0 auto;
+    text-align: left;
+    width: 48%;
+    
+}
+button {
+    
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    margin-right: 600px;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+button:hover {
+    color: whitesmoke;
+}
+
+.question {
+    font-size: 24px;
+    max-width: 75%;
+    display: inline-block;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
