@@ -169,6 +169,7 @@ var questions = [
 ];
 
 
+
 function loadQuiz (questions, quizContainer, resultsContainer, submitButton) {
   // place to put ouput and users answers
        function showQuestions (questions, quizContainer) {
